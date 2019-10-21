@@ -32,7 +32,7 @@ public class PatientController {
         List<Patient> patients = patientServiceImp.findAll();
         log.info("Get All Patients");
         if(patients == null) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No patient found");
         } else {
             return ResponseEntity.ok(patients);
         }
@@ -44,7 +44,7 @@ public class PatientController {
         Patient patient = patientServiceImp.findByEnterpriseId(id);
         log.info("Get Patients with id:" + id, patient);
         if(patient == null) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Patient with id: " + id + "not found");
         } else {
             return ResponseEntity.ok(patient);
         }
@@ -55,11 +55,12 @@ public class PatientController {
     public ResponseEntity createOrSavePatient(@RequestBody Patient patient) {
 
         log.info("Save Patient",patient);
-        Patient newPatient = patientServiceImp.savePatient(patient);
-        if(newPatient != null) {
-            return ResponseEntity.ok(newPatient);
+        Integer id = patient.getEnterpriseId();
+        if (id != null && patientServiceImp.existsById(patient.getEnterpriseId())) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Enterprise Id:" + id + " exists");
         } else {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
+            Patient newPatient = patientServiceImp.savePatient(patient);
+            return ResponseEntity.ok(newPatient);
         }
     }
 
@@ -69,9 +70,9 @@ public class PatientController {
 
         log.info("Delete Patient By Id: ",id);
         if(patientServiceImp.deletePatientById(id)) {
-            return ResponseEntity.ok(null);
+            return ResponseEntity.ok("Enterprise Id :" + id + " deleted");
         } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Enterprise Id doesn't exist");
         }
     }
 
@@ -84,7 +85,7 @@ public class PatientController {
             Patient updatedPatient = patientServiceImp.updatePatientById(id, patient);
             return ResponseEntity.ok(updatedPatient);
         } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No matching id found: " + id);
         }
     }
 

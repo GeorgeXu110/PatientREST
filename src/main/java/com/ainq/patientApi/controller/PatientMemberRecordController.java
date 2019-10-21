@@ -27,7 +27,7 @@ public class PatientMemberRecordController {
         List<PatientMemberRecord> patients = pmrServiceImp.findAll();
         log.info("Get All PatientMemberRecords");
         if(patients == null) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No records found");
         } else
             return ResponseEntity.ok(patients);
     }
@@ -38,7 +38,7 @@ public class PatientMemberRecordController {
         PatientMemberRecord pmr = pmrServiceImp.findById(id);
         log.info("Get Patients with id:" + id, pmr);
         if(pmr == null) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Record with id: " + id + "not found");
         } else {
             return ResponseEntity.ok(pmr);
         }
@@ -49,12 +49,14 @@ public class PatientMemberRecordController {
     public ResponseEntity createOrSavePatientMemberRecord(@RequestBody PatientMemberRecord pmr) {
 
         log.info("Save PatientMemberRecords",pmr);
-        PatientMemberRecord newPMR = pmrServiceImp.savePatient(pmr);
-        if(newPMR != null) {
-            return ResponseEntity.ok(newPMR);
+        Integer id = pmr.getId();
+        if(id != null && pmrServiceImp.existsById(id)) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Record Id:" + id + " exists");
         } else {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
+            PatientMemberRecord newPMR = pmrServiceImp.savePatient(pmr);
+            return ResponseEntity.ok(newPMR);
         }
+
     }
 
     @ApiOperation(value = "Delete a PatientMemberRecord entity by Id", response = ResponseEntity.class)
@@ -63,9 +65,9 @@ public class PatientMemberRecordController {
 
         log.info("Delete PatientMemberRecords By Id: ",id);
         if(pmrServiceImp.deletePatientMemberRecordById(id)) {
-            return ResponseEntity.ok(id.toString() + "PatientMemberRecords has been deleted");
+            return ResponseEntity.ok("Record Id :" + id + " deleted");
         } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Record Id doesn't exist");
         }
     }
 
@@ -78,7 +80,7 @@ public class PatientMemberRecordController {
             PatientMemberRecord updatedPatientMemberRecord= pmrServiceImp.updatePatientMemberRecordById(id, newPMR);
             return ResponseEntity.ok(updatedPatientMemberRecord);
         } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No matching id found: " + id);
         }
     }
 

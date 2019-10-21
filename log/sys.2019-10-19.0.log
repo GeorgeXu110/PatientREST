@@ -1,6 +1,0 @@
-2019-10-19 09:18:40,047 INFO (StartupInfoLogger.java:50)- Starting PatientApiApplication on Chaos-MacBook-Pro.local with PID 34197 (/Users/chaoxu/Downloads/patientApi/target/classes started by chaoxu in /Users/chaoxu/Downloads/patientApi)
-2019-10-19 09:18:40,098 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.10.RELEASE
-2019-10-19 09:18:40,099 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
-2019-10-19 09:18:48,481 INFO (StartupInfoLogger.java:59)- Started PatientApiApplication in 9.583 seconds (JVM running for 10.371)
-2019-10-19 09:19:35,468 INFO (PatientController.java:33)- Get All Patients
-2019-10-19 09:22:16,452 INFO (PatientController.java:82)- Update Patient By Id：

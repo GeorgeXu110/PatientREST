@@ -1,0 +1,10 @@
+2019-10-21 14:44:43,854 INFO (AddressController.java:54)- Save Address
+2019-10-21 14:45:16,078 INFO (AddressController.java:54)- Save Address
+2019-10-21 14:48:10,255 INFO (StartupInfoLogger.java:50)- Starting PatientApiApplication on Chaos-MacBook-Pro.local with PID 53755 (/Users/chaoxu/Downloads/patientApi/target/classes started by chaoxu in /Users/chaoxu/Downloads/patientApi)
+2019-10-21 14:48:10,262 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.10.RELEASE
+2019-10-21 14:48:10,263 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-21 14:48:21,521 INFO (StartupInfoLogger.java:59)- Started PatientApiApplication in 12.714 seconds (JVM running for 13.539)
+2019-10-21 14:48:26,497 INFO (AddressController.java:54)- Save Address
+2019-10-21 14:49:34,514 INFO (StartupInfoLogger.java:50)- Starting PatientApiApplication on Chaos-MacBook-Pro.local with PID 53805 (/Users/chaoxu/Downloads/patientApi/target/classes started by chaoxu in /Users/chaoxu/Downloads/patientApi)
+2019-10-21 14:49:34,517 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.10.RELEASE
+2019-10-21 14:49:34,518 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default

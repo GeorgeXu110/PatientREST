@@ -28,7 +28,7 @@ public class AddressController {
         List<Address> addresses = addressServiceImp.findAll();
         log.info("Get All Addresses");
         if(addresses == null) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No Address found");
         } else {
             return ResponseEntity.ok(addresses);
         }
@@ -41,7 +41,7 @@ public class AddressController {
         Address address = addressServiceImp.findById(id);
         log.info("Get Address with id:" + id, address);
         if(address == null) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Address with id: " + id + "not found");
         } else {
             return ResponseEntity.ok(address);
         }
@@ -52,11 +52,12 @@ public class AddressController {
     public ResponseEntity createOrSaveAddress(@RequestBody Address address) {
 
         log.info("Save Address",address);
-        Address newAdd = addressServiceImp.saveAddress(address);
-        if(newAdd != null) {
-            return ResponseEntity.ok(newAdd);
+        Integer id = address.getAddressId();
+        if (id != null && addressServiceImp.existsById(address.getAddressId())) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Address Id exists");
         } else {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
+            Address newAdd = addressServiceImp.saveAddress(address);
+            return ResponseEntity.ok(newAdd);
         }
     }
 
@@ -66,9 +67,9 @@ public class AddressController {
 
         log.info("Delete Address By Id: ",id);
         if(addressServiceImp.deleteAddressById(id)) {
-            return ResponseEntity.ok(null);
+            return ResponseEntity.ok("Delete Address :" + id);
         } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No matching id found: " + id);
         }
     }
 
@@ -81,7 +82,7 @@ public class AddressController {
             Address updatedAddr = addressServiceImp.updateAddressById(id, address);
             return ResponseEntity.ok(updatedAddr);
         } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No matching id found: " + id);
         }
     }
 
