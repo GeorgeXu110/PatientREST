@@ -1,8 +1,7 @@
-2019-10-21 10:30:44,232 INFO (PatientMemberRecordController.java:28)- Get All PatientMemberRecords
-2019-10-21 11:02:05,937 INFO (PatientMemberRecordController.java:51)- Save PatientMemberRecords
-2019-10-21 11:02:21,125 INFO (PatientMemberRecordController.java:39)- Get Patients with id:24
-2019-10-21 11:03:33,664 INFO (PatientMemberRecordController.java:76)- Update PatientMemberRecordB By Id：
-2019-10-21 11:03:45,091 INFO (PatientMemberRecordController.java:28)- Get All PatientMemberRecords
-2019-10-21 11:04:18,256 INFO (PatientMemberRecordController.java:28)- Get All PatientMemberRecords
-2019-10-21 11:05:17,394 INFO (PatientMemberRecordController.java:76)- Update PatientMemberRecordB By Id：
-2019-10-21 11:08:33,693 INFO (PatientMemberRecordController.java:64)- Delete PatientMemberRecords By Id: 
+2019-10-21 12:55:51,077 INFO (StartupInfoLogger.java:59)- Started AddressServiceTest in 11.626 seconds (JVM running for 13.809)
+2019-10-21 12:55:51,233 INFO (AddressServiceTest.java:42)- 
+2019-10-21 12:57:12,515 INFO (StartupInfoLogger.java:50)- Starting PMRServiceTest on Chaos-MacBook-Pro.local with PID 50581 (started by chaoxu in /Users/chaoxu/Downloads/patientApi)
+2019-10-21 12:57:12,516 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.10.RELEASE
+2019-10-21 12:57:12,517 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-21 12:57:23,696 INFO (StartupInfoLogger.java:59)- Started PMRServiceTest in 12.13 seconds (JVM running for 14.183)
+2019-10-21 12:57:23,863 INFO (PMRServiceTest.java:28)- 
