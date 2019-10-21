@@ -1,9 +1,0 @@
-2019-10-18 15:24:01,254 INFO (PatientMemberRecordController.java:69)- Update PatientMemberRecordB By Id：
-2019-10-18 15:24:30,999 INFO (AddressController.java:27)- Get All Addresses
-2019-10-18 16:41:24,914 INFO (StartupInfoLogger.java:50)- Starting PatientApiApplication on Chaos-MacBook-Pro.local with PID 31605 (/Users/chaoxu/Downloads/patientApi/target/classes started by chaoxu in /Users/chaoxu/Downloads/patientApi)
-2019-10-18 16:41:24,923 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.10.RELEASE
-2019-10-18 16:41:24,924 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
-2019-10-18 16:41:37,589 INFO (StartupInfoLogger.java:59)- Started PatientApiApplication in 14.192 seconds (JVM running for 15.573)
-2019-10-18 16:46:02,842 INFO (AddressController.java:29)- Get All Addresses
-2019-10-18 16:48:28,354 INFO (AddressController.java:54)- Save Address
-2019-10-18 16:52:41,674 INFO (AddressController.java:42)- Get Address with id:2
