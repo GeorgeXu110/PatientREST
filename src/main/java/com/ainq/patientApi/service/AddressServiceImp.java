@@ -5,6 +5,7 @@ import com.ainq.patientApi.repository.AddressRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -27,11 +28,13 @@ public class AddressServiceImp implements AddressService {
     }
 
     @Override
+    @Transactional
     public Address saveAddress(Address address) {
         return addressRepository.saveAndFlush(address);
     }
 
     @Override
+    @Transactional
     public Boolean deleteAddressById(Integer id) {
         if(addressRepository.existsById(id)) {
             addressRepository.deleteById(id);
@@ -42,6 +45,7 @@ public class AddressServiceImp implements AddressService {
     }
 
     @Override
+    @Transactional
     public Address updateAddressById(Integer id, Address newAddress){
         Address address = findById(id);
         address.setAddressLine1(newAddress.getAddressLine1());

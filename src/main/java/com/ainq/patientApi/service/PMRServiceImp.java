@@ -6,6 +6,7 @@ import com.ainq.patientApi.repository.PatientMemberRecordRepository;
 import com.ainq.patientApi.repository.PatientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -32,11 +33,13 @@ public class PMRServiceImp implements PMRService{
     }
 
     @Override
+    @Transactional
     public PatientMemberRecord savePatient(PatientMemberRecord patient) {
         return pmrRepository.save(patient);
     }
 
     @Override
+    @Transactional
     public Boolean deletePatientMemberRecordById(Integer id) {
         if(pmrRepository.existsById(id)) {
             pmrRepository.deleteById(id);
@@ -48,6 +51,7 @@ public class PMRServiceImp implements PMRService{
     }
 
     @Override
+    @Transactional
     public PatientMemberRecord updatePatientMemberRecordById(Integer id, PatientMemberRecord newPMR) {
         PatientMemberRecord pmr = findById(id);
         pmr.setSource(newPMR.getSource());
