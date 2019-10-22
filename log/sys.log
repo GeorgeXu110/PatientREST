@@ -1,8 +1,11 @@
-2019-10-21 15:04:31,649 INFO (StartupInfoLogger.java:59)- Started PatientApiApplication in 13.884 seconds (JVM running for 15.088)
-2019-10-21 15:04:41,513 INFO (PatientController.java:57)- Save Patient
-2019-10-21 15:05:38,255 INFO (PatientController.java:57)- Save Patient
-2019-10-21 15:06:15,861 INFO (PatientController.java:71)- Delete Patient By Id: 
-2019-10-21 15:08:58,614 INFO (StartupInfoLogger.java:50)- Starting PatientApiApplication on Chaos-MacBook-Pro.local with PID 54403 (/Users/chaoxu/Downloads/patientApi/target/classes started by chaoxu in /Users/chaoxu/Downloads/patientApi)
-2019-10-21 15:08:58,623 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.10.RELEASE
-2019-10-21 15:08:58,624 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
-2019-10-21 15:09:11,497 INFO (StartupInfoLogger.java:59)- Started PatientApiApplication in 14.362 seconds (JVM running for 15.238)
+2019-10-21 22:51:10,042 INFO (StartupInfoLogger.java:59)- Started PatientApiApplicationTests in 9.844 seconds (JVM running for 11.1)
+2019-10-21 22:51:10,223 INFO (PatientServiceTest.java:28)- 
+2019-10-21 22:51:10,585 INFO (PMRServiceTest.java:28)- 
+2019-10-21 22:51:10,751 INFO (AddressServiceTest.java:41)- 
+2019-10-21 23:07:14,117 INFO (StartupInfoLogger.java:50)- Starting PatientApiApplicationTests on Chaos-MacBook-Pro.local with PID 62351 (started by chaoxu in /Users/chaoxu/Downloads/patientApi)
+2019-10-21 23:07:14,131 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.10.RELEASE
+2019-10-21 23:07:14,134 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-21 23:07:24,767 INFO (StartupInfoLogger.java:59)- Started PatientApiApplicationTests in 11.328 seconds (JVM running for 12.596)
+2019-10-21 23:07:24,985 INFO (PatientServiceTest.java:28)- 
+2019-10-21 23:07:25,388 INFO (PMRServiceTest.java:28)- 
+2019-10-21 23:07:25,615 INFO (AddressServiceTest.java:41)- 

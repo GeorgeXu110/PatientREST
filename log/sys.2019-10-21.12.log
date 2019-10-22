@@ -1,0 +1,14 @@
+2019-10-21 22:31:29,468 INFO (StartupInfoLogger.java:59)- Started PatientApiApplicationTests in 13.01 seconds (JVM running for 14.433)
+2019-10-21 22:31:29,702 INFO (PatientServiceTest.java:28)- 
+2019-10-21 22:31:30,148 INFO (PMRServiceTest.java:28)- 
+2019-10-21 22:31:30,368 INFO (AddressServiceTest.java:41)- 
+2019-10-21 22:50:27,013 INFO (StartupInfoLogger.java:50)- Starting PatientApiApplicationTests on Chaos-MacBook-Pro.local with PID 61792 (started by chaoxu in /Users/chaoxu/Downloads/patientApi)
+2019-10-21 22:50:27,047 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.10.RELEASE
+2019-10-21 22:50:27,052 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-21 22:50:37,527 INFO (StartupInfoLogger.java:59)- Started PatientApiApplicationTests in 11.218 seconds (JVM running for 12.401)
+2019-10-21 22:50:37,684 INFO (PatientServiceTest.java:28)- 
+2019-10-21 22:50:38,082 INFO (PMRServiceTest.java:28)- 
+2019-10-21 22:50:38,296 INFO (AddressServiceTest.java:41)- 
+2019-10-21 22:51:00,792 INFO (StartupInfoLogger.java:50)- Starting PatientApiApplicationTests on Chaos-MacBook-Pro.local with PID 61828 (started by chaoxu in /Users/chaoxu/Downloads/patientApi)
+2019-10-21 22:51:00,795 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.10.RELEASE
+2019-10-21 22:51:00,797 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default

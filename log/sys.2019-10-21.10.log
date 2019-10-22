@@ -1,0 +1,14 @@
+2019-10-21 15:24:42,903 INFO (StartupInfoLogger.java:59)- Started PatientApiApplication in 15.407 seconds (JVM running for 16.63)
+2019-10-21 15:24:49,682 INFO (PatientController.java:45)- Get Patients with id:13
+2019-10-21 15:25:00,211 INFO (PatientController.java:33)- Get All Patients
+2019-10-21 15:26:15,655 INFO (PatientController.java:83)- Update Patient By Id：
+2019-10-21 15:26:23,830 INFO (PatientController.java:83)- Update Patient By Id：
+2019-10-21 15:26:46,356 INFO (PatientMemberRecordController.java:28)- Get All PatientMemberRecords
+2019-10-21 15:26:58,423 INFO (PatientMemberRecordController.java:39)- Get Patients with id:22
+2019-10-21 15:27:03,777 INFO (PatientMemberRecordController.java:39)- Get Patients with id:15
+2019-10-21 15:27:40,408 INFO (PatientMemberRecordController.java:39)- Get Patients with id:16
+2019-10-21 15:27:54,962 INFO (PatientMemberRecordController.java:39)- Get Patients with id:15
+2019-10-21 15:28:21,589 INFO (PatientMemberRecordController.java:28)- Get All PatientMemberRecords
+2019-10-21 15:58:33,606 INFO (StartupInfoLogger.java:50)- Starting PatientApiApplicationTests on Chaos-MacBook-Pro.local with PID 57580 (started by chaoxu in /Users/chaoxu/Downloads/patientApi)
+2019-10-21 15:58:33,629 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.10.RELEASE
+2019-10-21 15:58:33,631 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
