@@ -1,6 +1,7 @@
 package com.ainq.patientApi.service;
 
 import com.ainq.patientApi.entity.PatientMemberRecord;
+import com.ainq.patientApi.log.Timed;
 import com.ainq.patientApi.repository.AddressRepository;
 import com.ainq.patientApi.repository.PatientMemberRecordRepository;
 import com.ainq.patientApi.repository.PatientRepository;
@@ -23,11 +24,13 @@ public class PMRServiceImp implements PMRService{
     private PatientRepository patientRepository;
 
     @Override
+    @Timed
     public List<PatientMemberRecord> findAll() {
         return pmrRepository.findAll();
     }
 
     @Override
+    @Timed
     public PatientMemberRecord findById(Integer id) {
         return pmrRepository.findOneById(id);
     }
@@ -40,6 +43,7 @@ public class PMRServiceImp implements PMRService{
 
     @Override
     @Transactional
+    @Timed
     public Boolean deletePatientMemberRecordById(Integer id) {
         if(pmrRepository.existsById(id)) {
             pmrRepository.deleteById(id);
@@ -52,6 +56,7 @@ public class PMRServiceImp implements PMRService{
 
     @Override
     @Transactional
+    @Timed
     public PatientMemberRecord updatePatientMemberRecordById(Integer id, PatientMemberRecord newPMR) {
         PatientMemberRecord pmr = findById(id);
         pmr.setSource(newPMR.getSource());
@@ -75,11 +80,13 @@ public class PMRServiceImp implements PMRService{
     }
 
     @Override
+    @Timed
     public Boolean existsById(Integer id) {
         return pmrRepository.existsById(id);
     }
 
     @Override
+    @Timed
     public List<PatientMemberRecord> findByPatientEnterpriseId(Integer id){
         return pmrRepository.findByPatientEnterpriseId(id);
     }

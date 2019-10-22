@@ -1,0 +1,11 @@
+2019-10-22 12:58:10,484 INFO (StartupInfoLogger.java:59)- Started PatientApiApplication in 12.335 seconds (JVM running for 13.23)
+2019-10-22 13:00:52,981 INFO (PatientMemberRecordController.java:39)- Get Patients with id:2
+2019-10-22 13:06:40,136 INFO (StartupInfoLogger.java:50)- Starting PatientApiApplication on Chaos-MacBook-Pro.local with PID 68818 (/Users/chaoxu/Downloads/patientApi/target/classes started by chaoxu in /Users/chaoxu/Downloads/patientApi)
+2019-10-22 13:06:40,141 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.10.RELEASE
+2019-10-22 13:06:40,142 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-22 13:06:49,630 INFO (StartupInfoLogger.java:59)- Started PatientApiApplication in 10.664 seconds (JVM running for 11.423)
+2019-10-22 13:07:03,119 INFO (TimeLogAspect.java:26)- PMRServiceImp.findById took 1226 ms
+2019-10-22 13:07:03,135 INFO (PatientMemberRecordController.java:39)- Get Patients with id:2
+2019-10-22 13:08:41,296 INFO (StartupInfoLogger.java:50)- Starting PatientApiApplication on Chaos-MacBook-Pro.local with PID 68883 (/Users/chaoxu/Downloads/patientApi/target/classes started by chaoxu in /Users/chaoxu/Downloads/patientApi)
+2019-10-22 13:08:41,305 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.10.RELEASE
+2019-10-22 13:08:41,306 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default

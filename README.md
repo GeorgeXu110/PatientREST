@@ -11,6 +11,8 @@ This is a Patient Record Restful server.
 ### run the patientApi-0.0.1-SNAPSHOT.jar
     java -jar patientApi-0.0.1-SNAPSHOT.jar
    
+### Aspect log 
+    2019-10-22 13:10:42,183 INFO (TimeLogAspect.java:26)- AddressController.getAllAddresses took 1917 ms
 
 ### Springfox's Swagger UI Portal
     http://localhost:8080/swagger-ui.html

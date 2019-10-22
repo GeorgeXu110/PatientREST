@@ -1,8 +1,0 @@
-2019-10-21 12:44:40,837 INFO (StartupInfoLogger.java:59)- Started AddressServiceTest in 11.847 seconds (JVM running for 14.401)
-2019-10-21 12:47:46,276 INFO (StartupInfoLogger.java:50)- Starting AddressServiceTest on Chaos-MacBook-Pro.local with PID 50276 (started by chaoxu in /Users/chaoxu/Downloads/patientApi)
-2019-10-21 12:47:46,278 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.10.RELEASE
-2019-10-21 12:47:46,279 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
-2019-10-21 12:48:01,908 INFO (StartupInfoLogger.java:59)- Started AddressServiceTest in 16.716 seconds (JVM running for 18.531)
-2019-10-21 12:55:40,783 INFO (StartupInfoLogger.java:50)- Starting AddressServiceTest on Chaos-MacBook-Pro.local with PID 50509 (started by chaoxu in /Users/chaoxu/Downloads/patientApi)
-2019-10-21 12:55:40,785 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.10.RELEASE
-2019-10-21 12:55:40,786 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default

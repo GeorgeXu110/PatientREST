@@ -1,0 +1,10 @@
+2019-10-22 13:08:50,559 INFO (StartupInfoLogger.java:59)- Started PatientApiApplication in 10.486 seconds (JVM running for 11.258)
+2019-10-22 13:10:42,071 INFO (TimeLogAspect.java:26)- AddressServiceImp.findAll took 1706 ms
+2019-10-22 13:10:42,100 INFO (AddressController.java:31)- Get All Addresses
+2019-10-22 13:10:42,183 INFO (TimeLogAspect.java:26)- AddressController.getAllAddresses took 1917 ms
+2019-10-22 13:15:41,218 INFO (TimeLogAspect.java:26)- AddressServiceImp.findAll took 76 ms
+2019-10-22 13:15:41,221 INFO (AddressController.java:31)- Get All Addresses
+2019-10-22 13:15:41,222 INFO (TimeLogAspect.java:26)- AddressController.getAllAddresses took 80 ms
+2019-10-22 13:21:10,236 INFO (StartupInfoLogger.java:50)- Starting PatientApiApplicationTests on Chaos-MacBook-Pro.local with PID 69302 (started by chaoxu in /Users/chaoxu/Downloads/patientApi)
+2019-10-22 13:21:10,261 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.10.RELEASE
+2019-10-22 13:21:10,263 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default

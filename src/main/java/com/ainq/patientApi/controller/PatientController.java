@@ -2,6 +2,7 @@ package com.ainq.patientApi.controller;
 
 import com.ainq.patientApi.entity.Patient;
 import com.ainq.patientApi.entity.PatientMemberRecord;
+import com.ainq.patientApi.log.Timed;
 import com.ainq.patientApi.service.PMRServiceImp;
 import com.ainq.patientApi.service.PatientServiceImp;
 import io.swagger.annotations.Api;
@@ -27,6 +28,7 @@ public class PatientController {
 
     @ApiOperation(value = "Get all Patient entities", response = ResponseEntity.class)
     @GetMapping(value = "/Patients")
+    @Timed
     public ResponseEntity getAllPatients() {
 
         List<Patient> patients = patientServiceImp.findAll();
@@ -40,6 +42,7 @@ public class PatientController {
 
     @ApiOperation(value = "Get a Patient entity by Id", response = ResponseEntity.class)
     @GetMapping(value = "/Patients/{id}")
+    @Timed
     public ResponseEntity getPatientById(@PathVariable Integer id) {
         Patient patient = patientServiceImp.findByEnterpriseId(id);
         log.info("Get Patients with id:" + id, patient);
@@ -52,6 +55,7 @@ public class PatientController {
 
     @ApiOperation(value = "Save a Patient entity to DB", response = ResponseEntity.class)
     @PostMapping( value = "/Patients", consumes = "application/json")
+    @Timed
     public ResponseEntity createOrSavePatient(@RequestBody Patient patient) {
 
         log.info("Save Patient",patient);
@@ -66,6 +70,7 @@ public class PatientController {
 
     @ApiOperation(value = "Delete a Patient entity by Id", response = ResponseEntity.class)
     @DeleteMapping( value = "/Patients/{id}")
+    @Timed
     public ResponseEntity deletePatientById(@PathVariable Integer id) {
 
         log.info("Delete Patient By Id: ",id);
@@ -78,6 +83,7 @@ public class PatientController {
 
     @ApiOperation(value = "Update given Patient entity", response = ResponseEntity.class)
     @PutMapping( value = "/Patients/{id}")
+    @Timed
     public ResponseEntity updatePatientById(@PathVariable Integer id, @RequestBody Patient patient) {
 
         log.info("Update Patient By Id：",id);
@@ -91,6 +97,7 @@ public class PatientController {
 
     @ApiOperation(value = "Get all PatientMemberRecord entities with given Patient ID", response = ResponseEntity.class)
     @GetMapping(value = "/Patients/{PatientId}/PatientMemberRecords")
+    @Timed
     public ResponseEntity getAllPatientMemberRecordsByPatientId(@PathVariable Integer PatientId) {
 
         List<PatientMemberRecord> pmrs = pmrServiceImp.findByPatientEnterpriseId(PatientId);

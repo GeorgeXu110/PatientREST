@@ -1,6 +1,7 @@
 package com.ainq.patientApi.controller;
 
 import com.ainq.patientApi.entity.PatientMemberRecord;
+import com.ainq.patientApi.log.Timed;
 import com.ainq.patientApi.service.PMRServiceImp;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -22,6 +23,7 @@ public class PatientMemberRecordController {
 
     @ApiOperation(value = "Get all PatientMemberRecord entities", response = ResponseEntity.class)
     @GetMapping(value = "/PatientMemberRecords")
+    @Timed
     public ResponseEntity getAllPatientMemberRecords() {
 
         List<PatientMemberRecord> patients = pmrServiceImp.findAll();
@@ -34,6 +36,7 @@ public class PatientMemberRecordController {
 
     @ApiOperation(value = "Get a PatientMemberRecord entity by Id", response = ResponseEntity.class)
     @GetMapping(value = "/PatientMemberRecords/{id}")
+    @Timed
     public ResponseEntity getPatientMemberRecordsById(@PathVariable Integer id) {
         PatientMemberRecord pmr = pmrServiceImp.findById(id);
         log.info("Get Patients with id:" + id, pmr);
@@ -46,6 +49,7 @@ public class PatientMemberRecordController {
 
     @ApiOperation(value = "Save a PatientMemberRecord to DB", response = ResponseEntity.class)
     @PostMapping( value = "/PatientMemberRecords", consumes = "application/json")
+    @Timed
     public ResponseEntity createOrSavePatientMemberRecord(@RequestBody PatientMemberRecord pmr) {
 
         log.info("Save PatientMemberRecords",pmr);
@@ -61,6 +65,7 @@ public class PatientMemberRecordController {
 
     @ApiOperation(value = "Delete a PatientMemberRecord entity by Id", response = ResponseEntity.class)
     @DeleteMapping( value = "/PatientMemberRecords/{id}")
+    @Timed
     public ResponseEntity deletePatientMemberRecordById(@PathVariable Integer id) {
 
         log.info("Delete PatientMemberRecords By Id: ",id);
@@ -73,6 +78,7 @@ public class PatientMemberRecordController {
 
     @ApiOperation(value = "Update given PatientMemberRecord entity", response = ResponseEntity.class)
     @PutMapping( value = "/PatientMemberRecords/{id}", consumes = "application/json")
+    @Timed
     public ResponseEntity updatePatientById(@PathVariable Integer id, @RequestBody PatientMemberRecord newPMR) {
 
         log.info("Update PatientMemberRecordB By Id：",id);

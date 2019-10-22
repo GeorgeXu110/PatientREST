@@ -1,6 +1,7 @@
 package com.ainq.patientApi.controller;
 
 import com.ainq.patientApi.entity.Address;
+import com.ainq.patientApi.log.Timed;
 import com.ainq.patientApi.service.AddressServiceImp;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -23,6 +24,7 @@ public class AddressController {
 
     @ApiOperation(value = "Get all Address entities", response = ResponseEntity.class)
     @GetMapping(value = "/Addresses")
+    @Timed
     public ResponseEntity getAllAddresses() {
 
         List<Address> addresses = addressServiceImp.findAll();
@@ -37,6 +39,7 @@ public class AddressController {
 
     @ApiOperation(value = "Get Address entity by given Id", response = ResponseEntity.class)
     @GetMapping(value = "/Addresses/{id}")
+    @Timed
     public ResponseEntity getAddressById(@PathVariable Integer id) {
         Address address = addressServiceImp.findById(id);
         log.info("Get Address with id:" + id, address);
@@ -49,6 +52,7 @@ public class AddressController {
 
     @ApiOperation(value = "Save an Address to DB", response = ResponseEntity.class)
     @PostMapping( value = "/Addresses", consumes = "application/json")
+    @Timed
     public ResponseEntity createOrSaveAddress(@RequestBody Address address) {
 
         log.info("Save Address",address);
@@ -63,6 +67,7 @@ public class AddressController {
 
     @ApiOperation(value = "Delete an Address entity by Id", response = ResponseEntity.class)
     @DeleteMapping( value = "/Addresses/{id}")
+    @Timed
     public ResponseEntity deleteAddressById(@PathVariable Integer id) {
 
         log.info("Delete Address By Id: ",id);
@@ -75,6 +80,7 @@ public class AddressController {
 
     @ApiOperation(value = "Update given Address entity", response = ResponseEntity.class)
     @PutMapping( value = "/Addresses/{id}")
+    @Timed
     public ResponseEntity updateAddressById(@PathVariable Integer id, @RequestBody Address address) {
 
         log.info("Update Address By Id：",id);

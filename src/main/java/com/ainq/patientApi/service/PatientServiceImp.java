@@ -1,6 +1,7 @@
 package com.ainq.patientApi.service;
 
 import com.ainq.patientApi.entity.Patient;
+import com.ainq.patientApi.log.Timed;
 import com.ainq.patientApi.repository.PatientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -32,6 +33,7 @@ public class PatientServiceImp implements PatientService{
 
     @Override
     @Transactional
+    @Timed
     public Boolean deletePatientById(Integer id) {
         if(patientRepository.existsById(id)) {
             patientRepository.deleteById(id);
@@ -44,6 +46,7 @@ public class PatientServiceImp implements PatientService{
 
     @Override
     @Transactional
+    @Timed
     public Patient updatePatientById(Integer id, Patient newPatient) {
         Patient patient = findByEnterpriseId(id);
         patient.setEnterpriseName(newPatient.getEnterpriseName());
@@ -52,6 +55,7 @@ public class PatientServiceImp implements PatientService{
     }
 
     @Override
+    @Timed
     public Boolean existsById(Integer id) {
         return patientRepository.existsById(id);
     }

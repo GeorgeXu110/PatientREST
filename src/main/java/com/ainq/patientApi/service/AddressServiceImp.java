@@ -1,6 +1,7 @@
 package com.ainq.patientApi.service;
 
 import com.ainq.patientApi.entity.Address;
+import com.ainq.patientApi.log.Timed;
 import com.ainq.patientApi.repository.AddressRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -17,24 +18,28 @@ public class AddressServiceImp implements AddressService {
     private AddressRepository addressRepository;
 
     @Override
+    @Timed
     public List<Address> findAll() {
 
         return addressRepository.findAll();
     }
 
     @Override
+    @Timed
     public Address findById(Integer id) {
         return addressRepository.findOneByAddressId(id);
     }
 
     @Override
     @Transactional
+    @Timed
     public Address saveAddress(Address address) {
         return addressRepository.saveAndFlush(address);
     }
 
     @Override
     @Transactional
+    @Timed
     public Boolean deleteAddressById(Integer id) {
         if(addressRepository.existsById(id)) {
             addressRepository.deleteById(id);
@@ -46,6 +51,7 @@ public class AddressServiceImp implements AddressService {
 
     @Override
     @Transactional
+    @Timed
     public Address updateAddressById(Integer id, Address newAddress){
         Address address = findById(id);
         address.setAddressLine1(newAddress.getAddressLine1());
@@ -59,6 +65,7 @@ public class AddressServiceImp implements AddressService {
     }
 
     @Override
+    @Timed
     public Boolean existsById(Integer id) {
        return addressRepository.existsById(id);
     }
